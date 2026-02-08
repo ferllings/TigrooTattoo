@@ -1,0 +1,17 @@
+{
+  "name": "tigroo-tattoo",
+  "version": "1.0.0",
+  "description": "Tigroo Tattoo website - Eleventy",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf public",
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=/TigrooTattoo/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "tatouage": [
+    {
+      "nom": "Thomas",
+      "slug": "thomas",
+      "thumbnail": "/img/team/thomas_thumb.jpg",
+      "image": "/img/team/thomas.jpg",
+      "instagram": "thomastattoo81"
+    },
+    {
+      "nom": "Sarah",
+      "slug": "sarah",
+      "thumbnail": "/img/team/sarah_thumb.jpg",
+      "image": "/img/team/sarah.jpg",
+      "instagram": "sarahkim_t"
+    },
+    {
+      "nom": "Alex",
+      "slug": "alex",
+      "thumbnail": "/img/team/alex_thumb.jpg",
+      "image": "/img/team/alex.jpg",
+      "instagram": "inked_by_alex"
+    },
+    {
+      "nom": "Adeline",
+      "slug": "adeline",
+      "thumbnail": "/img/team/adeline_thumb.jpg",
+      "image": "/img/team/adeline.jpg",
+      "instagram": "danbor.ink",
+      "facebook": "Danbor-Ink-Tatouage"
+    },
+    {
+      "nom": "Loik",
+      "slug": "loik",
+      "thumbnail": "/img/team/loik_thumb.jpg",
+      "image": "/img/team/loik.jpg",
+      "instagram": "loyck.ttt"
+    },
+    {
+      "nom": "Pauline",
+      "slug": "pauline",
+      "thumbnail": "/img/team/pauline_thumb.jpg",
+      "image": "/img/team/pauline.jpg"
+    }
+  ],
+  "piercing": [
+    {
+      "nom": "Carole",
+      "slug": "carole",
+      "thumbnail": "/img/team/carole_thumb.jpg",
+      "image": "/img/team/carole.jpg",
+      "instagram": "katpiercing81"
+    },
+    {
+      "nom": "Maé",
+      "slug": "mae",
+      "thumbnail": "/img/team/mae_thumb.jpg",
+      "image": "/img/team/mae.jpg",
+      "instagram": "mae_piercing81100"
+    }
+  ],
+  "detatouage": [
+    {
+      "nom": "Marlène",
+      "slug": "marlene",
+      "thumbnail": "/img/team/marlene_thumb.jpg",
+      "image": "/img/team/marlene.jpg"
+    }
+  ]
+}

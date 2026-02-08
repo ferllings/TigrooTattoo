@@ -1,0 +1,46 @@
+{#
+  Paramètres acceptés :
+  - dir : chemin du répertoire (ex: "static/img/shop")
+  - baseUrl : URL de base pour les images (ex: "/img/shop")
+  - hashTarget : cible pour fermer la modal (ex: "shop")
+  - prefix : préfixe pour les IDs des modales (ex: "shop")
+#}
+{% set dir = dir or "static/img/shop" %}
+{% set baseUrl = baseUrl or "/img/shop" %}
+{% set hashTarget = hashTarget or "shop" %}
+{% set prefix = prefix or "modal" %}
+
+{% if dir | fileExists %}
+  {% set files = dir | readDir %}
+  <div class="gallery">
+    {% for file in files %}
+      {% if not file.Name.startsWith('.') and file.Name.endsWith('_thumb.jpg') %}
+        {% set fullImage = file.Name.replace('_thumb.jpg', '.jpg') %}
+        {% set modalId = prefix ~ '-' ~ loop.index0 %}
+
+        <a href="#{{ modalId }}" class="gallery-item">
+          <img src="{{ baseUrl }}/{{ file.Name }}" alt="" loading="lazy" />
+        </a>
+
+        <div id="{{ modalId }}" class="modal">
+          <a href="#{{ hashTarget }}" class="modal-overlay"><span class="sr-only">Fermer</span></a>
+          <div class="modal-content">
+            <a href="#{{ hashTarget }}" class="modal-close">
+              <span aria-hidden="true">&times;</span>
+              <span class="sr-only">Fermer</span>
+            </a>
+            <img src="{{ baseUrl }}/{{ fullImage }}" alt="" />
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <script>
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && window.location.hash.startsWith('#{{ prefix }}-')) {
+        window.location.hash = '{{ hashTarget }}';
+      }
+    });
+  </script>
+{% endif %}

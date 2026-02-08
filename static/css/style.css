@@ -1,0 +1,194 @@
+/*
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... }
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { ... }
+*/
+
+@font-face {
+    font-family: 'Vogue';
+    src: url('../fonts/Vogue.ttf');
+}
+
+:root {
+  --main-dark-color: #131615;
+  --main-light-color: #efece5;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+}
+
+body {
+  line-height: 1.6;
+  background: var(--main-dark-color);
+  font-size: 1.2rem;
+  font-family: 'Georgia', sans-serif;
+}
+
+h2 {
+    font-family: 'Vogue';
+}
+
+header {
+    hr {
+    margin: 0 10%;
+    border-bottom: 1px solid var(--main-light-color);
+  }
+}
+
+/* Navgation menu */
+nav {
+  margin: 0;
+  font-family: 'Vogue';
+  font-size: 1.4rem;
+
+  a {
+    display: flex;
+    color: var(--main-light-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    svg {
+      width: 2rem;
+    }
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+
+    /* Bouton Burger */
+    .menu-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      border: 1px solid var(--main-light-color);
+      margin: 1rem;
+      padding: 0.5rem;
+      border-radius: 0.2rem;
+    }
+    .burger-icon, .burger-icon::before, .burger-icon::after {
+      content: "";
+      display: block;
+      background: #efece5;
+      height: 3px;
+      width: 25px;
+      transition: all 0.3s;
+    }
+    .burger-icon::before { transform: translateY(-8px); }
+    .burger-icon::after { transform: translateY(5px); }
+
+    .nav-logo a {
+      margin: 0;
+      padding: 0;
+      img {
+        height: 5rem;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      &.social {
+        a {
+          margin: 0.5rem;
+          padding: 0.5rem;
+        }
+      }
+      &.navigation-desktop {
+        display: none;
+        a {
+          margin: 0.5rem;
+          padding: 0.5rem;
+        }
+      }
+      &.navigation-mobile {
+        display: flex;
+        flex-direction: column;
+        a {
+          margin: 0;
+          padding: 0;
+        }
+      }
+      > li {
+        display: inline-block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    &.navigation-mobile {
+      display: none;
+      flex-direction: column;
+      &.open {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  nav {
+    .row {
+      .menu-toggle { display: none; }
+      ul.navigation-desktop {
+        display: flex;
+      }
+      ul.social {
+        margin-right: 1rem;
+        a {
+          margin: 0.2rem;
+          padding: 0.2rem;
+        }
+      }
+    }
+    ul.navigation-mobile {
+      display: none;
+      &.open {
+        display: none;
+      }
+    }
+  }
+}
+
+.sr-only{
+   border: 0 !important;
+   clip: rect(1px,1px,1px,1px) !important;
+   clip-path: inset(50%) !important;
+   height: 1px !important;
+   overflow: hidden !important;
+   padding: 0 !important;
+   position: absolute !important;
+   width: 1px !important;
+   white-space: nowrap !important;
+}

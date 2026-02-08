@@ -1,0 +1,182 @@
+/* Team picture */
+
+.mask-frame {
+    margin: 1rem 5%;
+    position: relative;
+    display: inline-block;
+    img.team {
+      width: 90%;
+      display: block;
+  
+      /* Le cœur de l'effet */
+      -webkit-mask-image: url('/img/mask-team.png');
+      -webkit-mask-size: cover;
+      -webkit-mask-repeat: no-repeat;
+
+      mask-image: url('/img/mask-team.png');
+      mask-size: cover;
+      mask-repeat: no-repeat;
+    }
+}
+
+section#piercing,
+section#detatouage {
+  > div {
+    padding: 1rem 0;
+
+    &.texte {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  section#piercing,
+  section#detatouage {
+    > div {
+      width: 50%;
+    }
+  }
+}
+
+section#tatoueurs,
+section#shop,
+section#reviews,
+section#contact {
+  text-align: center;
+}
+
+/* Liste personnes */
+ul.personnes {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+
+  li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--main-dark-color);
+    border-radius: 0.5rem;
+    width: 18rem;
+    height: 25rem;
+    min-width: 150px;
+    max-width: 280px;
+    overflow: hidden;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-end;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+    }
+
+    .nom {
+      z-index: 2;
+        font-family: 'Vogue';
+      font-size: 1.25rem;
+      font-weight: bold;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.5);
+      color: var(--main-light-color);
+      margin-bottom: 2rem;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+
+    a:hover img,
+    a:focus img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  section#piercing,
+  section#detatouage {
+    display: flex;
+  }
+  section#piercing {
+    flex-direction: row-reverse;
+  }
+}
+
+section#piercing,
+section#shop,
+section#contact {
+  padding: 1rem;
+  color: var(--main-light-color);
+  background: var(--main-dark-color);
+}
+
+section#tatoueurs,
+section#detatouage,
+section#reviews {
+  padding: 1rem;
+  color: var(--main-dark-color);
+  background-image: url('/img/mask-top.png'), url('/img/mask-bottom.png');
+  background-position: center top, center bottom;
+  background-repeat: repeat-x, repeat-x;
+  background-color: var(--main-light-color);
+}
+
+/* Google Reviews Section */
+.reviews-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Masquer le branding SociableKIT */
+.sk_branding a {
+  display: none !important;
+}
+
+/* Contacts */
+#contact {
+  p {
+    display: flex;
+    justify-content: center;
+    svg {
+      width: 1rem;
+      margin-right: 0.5rem;
+    }
+  }
+  .columns {
+    display: flex;
+    justify-content: space-evenly;
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--main-light-color);
+      text-decoration: none;
+      svg {
+        width: 2rem;
+        display: block;
+      }
+    }
+  }
+}

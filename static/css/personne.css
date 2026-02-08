@@ -1,0 +1,73 @@
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  &.light {
+    background: var(--main-light-color);
+    color: var(--main-dark-color);
+  }
+  &.dark {
+    background: var(--main-dark-color);
+    color: var(--main-light-color);
+  }
+}
+
+/* Page personne individuelle */
+main {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.personne-info {
+  padding: 2rem;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+      font-family: 'Vogue';
+  }
+
+  .role {
+    font-size: 1.5rem;
+    font-style: italic;
+    opacity: 0.8;
+    margin: 0.5rem 0 2rem;
+  }
+
+  .content {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: left;
+    line-height: 1.8;
+    .contact {
+      a {
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--main-light-color);
+        svg {
+          margin-right: 0.5rem;
+          width: 2rem;
+        }
+      }
+    }
+  }
+
+  .btn-retour {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: var(--main-dark-color);
+    color: var(--main-light-color);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
