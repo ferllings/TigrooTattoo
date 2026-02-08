@@ -7,6 +7,7 @@
                   initial-scale=1.0">
   <title>{{ title or "Tigroo Tattoo" }}</title>
   <link rel="icon" href="{{ '/img/favicon.png' | url }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ '/css/vars.css' | url }}">
   <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
   {% if extraCss %}{{ extraCss | safe }}{% endif %}
 </head>
