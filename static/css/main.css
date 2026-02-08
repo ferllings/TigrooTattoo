@@ -136,7 +136,7 @@ section#detatouage,
 section#reviews {
   padding: 1rem;
   color: var(--main-dark-color);
-  background-image: url('/img/mask-top.png'), url('/img/mask-bottom.png');
+  background-image: var(--mask-top), var(--mask-bottom);
   background-position: center top, center bottom;
   background-repeat: repeat-x, repeat-x;
   background-color: var(--main-light-color);
