@@ -1,6 +1,6 @@
 <li>
-  <a href="equipe/{{ person.slug }}/">
-    <img src="{{ person.thumbnail }}" alt="" />
+  <a href="{{ ('/equipe/' + person.slug + '/') | url }}">
+    <img src="{{ person.thumbnail | url }}" alt="" />
     <div class="nom">{{ person.nom }}</div>
   </a>
 </li>

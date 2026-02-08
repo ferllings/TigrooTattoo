@@ -8,14 +8,14 @@ layout: layouts/base.njk
 eleventyComputed:
   bodyclass: 'class="dark personne-{{ person.slug }} category-{{ person.category }}"'
   extraCss: |
-    <link rel="stylesheet" href="/css/personne.css">
-    <link rel="stylesheet" href="/css/gallery.css">
+    <link rel="stylesheet" href="{{ '/css/personne.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/gallery.css' | url }}">
 ---
 
 <div class="personne">
   {% if person.thumbnail %}
   <div class="personne-photo">
-    <img src="{{ person.thumbnail }}" alt="" />
+    <img src="{{ person.thumbnail | url }}" alt="" />
   </div>
   {% endif %}
   <div class="personne-info">
@@ -39,7 +39,7 @@ eleventyComputed:
       {% endif %}
       </div>
     </div>
-    <a href="/" class="btn-retour">← Retour à l'accueil</a>
+    <a href="{{ '/' | url }}" class="btn-retour">← Retour à l'accueil</a>
   </div>
 </div>
 {% set dir = "static/img/team/" ~ person.slug %}

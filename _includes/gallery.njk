@@ -18,18 +18,18 @@
         {% set fullImage = file.Name.replace('_thumb.jpg', '.jpg') %}
         {% set modalId = prefix ~ '-' ~ loop.index0 %}
 
-        <a href="#{{ modalId }}" class="gallery-item">
-          <img src="{{ baseUrl }}/{{ file.Name }}" alt="" loading="lazy" />
+        <a href="{{ '#' + modalId | url }}" class="gallery-item">
+          <img src="{{ (baseUrl + '/' + file.Name) | url }}" alt="" loading="lazy" />
         </a>
 
         <div id="{{ modalId }}" class="modal">
-          <a href="#{{ hashTarget }}" class="modal-overlay"><span class="sr-only">Fermer</span></a>
+          <a href="{{ '#' + hashTarget | url }}" class="modal-overlay"><span class="sr-only">Fermer</span></a>
           <div class="modal-content">
-            <a href="#{{ hashTarget }}" class="modal-close">
+            <a href="{{ '#' + hashTarget | url }}" class="modal-close">
               <span aria-hidden="true">&times;</span>
               <span class="sr-only">Fermer</span>
             </a>
-            <img src="{{ baseUrl }}/{{ fullImage }}" alt="" />
+            <img src="{{ (baseUrl + '/' + fullImage) | url }}" alt="" />
           </div>
         </div>
       {% endif %}

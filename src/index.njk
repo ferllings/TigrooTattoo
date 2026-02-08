@@ -6,8 +6,8 @@ maxReviews: 10
 bodyclass: 'class="home"'
 eleventyComputed:
   extraCss: |
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/gallery.css">
+    <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/gallery.css' | url }}">
     <style>
       /* Limiter l'affichage des avis selon la config */
       .sk-masonry-item:nth-child(n+{{ maxReviews + 1 }}) {
@@ -17,7 +17,7 @@ eleventyComputed:
 ---
 
 <div class="mask-frame">
-  <img class="team" src="/img/team/team.jpg" alt="" />
+  <img class="team" src="{{ '/img/team/team.jpg' | url }}" alt="" />
 </div>
 
 <section id="tatoueurs">
