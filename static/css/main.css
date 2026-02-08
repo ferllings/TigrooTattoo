@@ -9,11 +9,11 @@
       display: block;
   
       /* Le cœur de l'effet */
-      -webkit-mask-image: var(--mask-image);
+      -webkit-mask-image: var(--mask-team);
       -webkit-mask-size: cover;
       -webkit-mask-repeat: no-repeat;
 
-      mask-image: var(--mask-image);
+      mask-image: var(--mask-team);
       mask-size: cover;
       mask-repeat: no-repeat;
     }
