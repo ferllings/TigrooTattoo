@@ -8,10 +8,10 @@
       "instagram": "thomastattoo81"
     },
     {
-      "nom": "Sarah",
-      "slug": "sarah",
-      "thumbnail": "/img/team/sarah_thumb.jpg",
-      "image": "/img/team/sarah.jpg",
+      "nom": "Sarah-Kim",
+      "slug": "sarahkim",
+      "thumbnail": "/img/team/sarahkim_thumb.jpg",
+      "image": "/img/team/sarahkim.jpg",
       "instagram": "sarahkim_t"
     },
     {
@@ -40,22 +40,23 @@
       "nom": "Pauline",
       "slug": "pauline",
       "thumbnail": "/img/team/pauline_thumb.jpg",
-      "image": "/img/team/pauline.jpg"
+      "image": "/img/team/pauline.jpg",
+      "instagram": "pom_ink_"
     }
   ],
   "piercing": [
     {
-      "nom": "Carole",
-      "slug": "carole",
-      "thumbnail": "/img/team/carole_thumb.jpg",
-      "image": "/img/team/carole.jpg",
+      "nom": "Karole",
+      "slug": "karole",
+      "thumbnail": "/img/team/karole_thumb.jpg",
+      "image": "/img/team/karole.jpg",
       "instagram": "katpiercing81"
     },
     {
-      "nom": "Maé",
-      "slug": "mae",
-      "thumbnail": "/img/team/mae_thumb.jpg",
-      "image": "/img/team/mae.jpg",
+      "nom": "Maëlyz",
+      "slug": "maelys",
+      "thumbnail": "/img/team/maelys_thumb.jpg",
+      "image": "/img/team/maelys.jpg",
       "instagram": "mae_piercing81100"
     }
   ],
@@ -64,7 +65,8 @@
       "nom": "Marlène",
       "slug": "marlene",
       "thumbnail": "/img/team/marlene_thumb.jpg",
-      "image": "/img/team/marlene.jpg"
+      "image": "/img/team/marlene.jpg",
+      "instagram": "marleneinkless"
     }
   ]
 }
