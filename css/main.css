@@ -86,13 +86,24 @@ ul.personnes {
 
     .nom {
       z-index: 2;
-        font-family: 'Vogue';
+      font-family: 'Vogue';
       font-size: 1.25rem;
       font-weight: bold;
       padding: 1rem;
       background: rgba(0, 0, 0, 0.5);
       color: var(--main-light-color);
       margin-bottom: 2rem;
+
+      .instagram {
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        align-items: center;
+        svg {
+          width: 1rem;
+        }
+      }
     }
 
     img {
