@@ -61,6 +61,19 @@ eleventyComputed:
 
 <section id="shop">
   <h2>Le Shop</h2>
+  <a href="#visite-virtuelle" class="virtual-tour-link">Visite virtuelle</a>
+
+  <div id="visite-virtuelle" class="modal">
+    <a href="#shop" class="modal-overlay"><span class="sr-only">Fermer</span></a>
+    <div class="modal-content">
+      <a href="#shop" class="modal-close">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Fermer</span>
+      </a>
+      <iframe src="https://www.google.com/maps/embed?pb=!4v1771170417580!6m8!1m7!1sCAoSHENJQUJJaEFxc2RkenBxd3Z6a2h2bEVlRHUycDU.!2m2!1d43.60467317645463!2d2.24250864653167!3f96.32129312639569!4f-7.492035782354122!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
   {% include "gallery.njk" %}
 </section>
 
