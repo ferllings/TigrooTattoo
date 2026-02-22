@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "nom": "Oreille",
+      "piercings": [
+        { "nom": "Lobe", "prix": "20€", "prixDouble": "35€" },
+        { "nom": "Upper Lobe", "prix": "25€", "prixDouble": "45€" },
+        { "nom": "Hélix", "prix": "30€" },
+        { "nom": "Flat", "prix": "30€" },
+        { "nom": "Tragus", "prix": "40€" },
+        { "nom": "Anti-Tragus", "prix": "45€" },
+        { "nom": "Anti-Hélix", "prix": "40€" },
+        { "nom": "Rook", "prix": "40€" },
+        { "nom": "Conch", "prix": "40€" },
+        { "nom": "Daith", "prix": "45€" },
+        { "nom": "Snug", "prix": "45€" },
+        { "nom": "Industriel", "prix": "55€" }
+      ]
+    },
+    {
+      "nom": "Visage",
+      "piercings": [
+        { "nom": "Labret", "prix": "40€" },
+        { "nom": "Smiley", "prix": "40€" },
+        { "nom": "Médusa", "prix": "40€" },
+        { "nom": "Langue", "prix": "45€" },
+        { "nom": "Venom", "prix": "90€" },
+        { "nom": "Cheek", "prix": "50€" },
+        { "nom": "Dalhia", "prix": "50€" },
+        { "nom": "Labret Vertical", "prix": "45€" },
+        { "nom": "Arcade", "prix": "40€" },
+        { "nom": "Narine", "prix": "40€" },
+        { "nom": "Bridge", "prix": "45€" },
+        { "nom": "Septum", "prix": "50€" }
+      ]
+    },
+    {
+      "nom": "Corps",
+      "piercings": [
+        { "nom": "Téton", "prix": "45€", "prixDouble": "85€" },
+        { "nom": "Nombril", "prix": "45€" },
+        { "nom": "Microdermal / Surface", "prix": "60€", "prixDouble": "100€" }
+      ]
+    }
+  ]
+}

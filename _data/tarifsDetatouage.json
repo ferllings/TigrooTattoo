@@ -1,0 +1,17 @@
+{
+  "consultation": [
+    { "nom": "Détatouage", "prix": "40€" },
+    { "nom": "California Care", "prix": "30€" }
+  ],
+  "grille": [
+    { "taille": "XS", "dimensions": "Moins de 5cm²", "prix": "49€", "temps": "10 mins" },
+    { "taille": "S", "dimensions": "De 5 à 15cm²", "prix": "79€", "temps": "15 mins" },
+    { "taille": "M", "dimensions": "De 16 à 50 cm²", "prix": "119€", "temps": "20 mins" },
+    { "taille": "L", "dimensions": "De 51 à 100 cm²", "prix": "159€", "temps": "25 mins" },
+    { "taille": "XL", "dimensions": "De 101 à 200 cm²", "prix": "199€", "temps": "30 mins" }
+  ],
+  "autres": [
+    { "nom": "Sourcils", "prix": "79€", "temps": "20/30 mins" },
+    { "nom": "Soin California Care Visage", "prix": "109€", "temps": "45 mins" }
+  ]
+}

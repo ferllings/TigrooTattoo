@@ -1,0 +1,59 @@
+---
+layout: layouts/base.njk
+title: "Tarifs Détatouage — Tigroo Tattoo"
+permalink: /detatouage/tarifs/
+bodyclass: 'class="tarifs-detatouage"'
+extraCss: |
+  <link rel="stylesheet" href="/css/tarifs.css">
+---
+
+<div class="tarifs-page">
+  <h2>Tarifs Détatouage</h2>
+
+  <div class="tarifs-consultation">
+    <h3>Tarif consultation médicale</h3>
+    <ul>
+      {% for c in tarifsDetatouage.consultation %}
+        <li>{{ c.nom }} : <strong>{{ c.prix }}</strong></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="tarifs-grille">
+    <h3>Grille tarifaire</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Taille</th>
+          <th>Dimensions</th>
+          <th>Tarifs</th>
+          <th>Temps</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in tarifsDetatouage.grille %}
+          <tr>
+            <td>{{ item.taille }}</td>
+            <td>{{ item.dimensions }}</td>
+            <td>{{ item.prix }}</td>
+            <td>{{ item.temps }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+      <tbody class="autres">
+        {% for item in tarifsDetatouage.autres %}
+          <tr>
+            <td colspan="2">{{ item.nom }}</td>
+            <td>{{ item.prix }}</td>
+            <td>{{ item.temps }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <p class="tarifs-footer">Sur RDV</p>
+
+  <a href="/docs/Detatouage Tarifs 2026.png" download class="btn-retour">Télécharger la grille tarifaire (PNG)</a>
+  <a href="/" class="btn-retour">← Retour à l'accueil</a>
+</div>
