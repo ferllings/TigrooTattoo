@@ -1,5 +1,6 @@
 /* Gallery - True Masonry Layout with Fixed Size */
 .gallery {
+  width: 100%;
   column-gap: 1rem;
   padding: 1rem;
   max-width: 100%;
@@ -148,4 +149,33 @@
     top: -35px;
     font-size: 35px;
   }
+}
+
+/* Virtual tour link */
+.virtual-tour-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 3rem 2.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+              url('/img/visiteVirtuelle_thumb.jpg') center / cover no-repeat;
+  color: var(--main-light-color);
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.virtual-tour-link:hover,
+.virtual-tour-link:focus {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* iframe inside modal */
+.modal-content iframe {
+  width: 90vw;
+  height: 90vh;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }

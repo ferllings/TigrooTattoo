@@ -15,30 +15,48 @@ body {
 /* Page personne individuelle */
 main {
   margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* --- Personne (photo + info) --- */
+.personne {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personne-photo {
+  img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+  }
 }
 
 .personne-info {
-  padding: 2rem;
+  padding: 1rem 0;
   text-align: center;
 
   h1 {
-    font-size: 3rem;
-    margin: 1rem 0;
-      font-family: 'Vogue';
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    font-family: 'Vogue';
   }
 
   .role {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-style: italic;
     opacity: 0.8;
-    margin: 0.5rem 0 2rem;
+    margin: 0.5rem 0 1rem;
   }
 
   .content {
-    max-width: 800px;
-    margin: 2rem auto;
+    margin: 1rem auto;
     text-align: left;
     line-height: 1.8;
     .contact {
@@ -58,8 +76,8 @@ main {
 
   .btn-retour {
     display: inline-block;
-    margin-top: 2rem;
-    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
     background: var(--main-dark-color);
     color: var(--main-light-color);
     text-decoration: none;
@@ -69,5 +87,100 @@ main {
     &:hover {
       opacity: 0.8;
     }
+  }
+}
+
+/* --- Bio / Flyer --- */
+.personne-bio {
+  padding: 1rem 0;
+  text-align: center;
+  line-height: 1.8;
+
+  .bio-accroche {
+    font-family: 'Vogue';
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-family: 'Vogue';
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .garanties {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: left;
+    li {
+      padding: 0.5rem 0 0.5rem 1.5rem;
+      position: relative;
+      &::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+  .btn-tarifs-inline {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.5rem;
+    color: var(--main-light-color);
+    text-decoration: none;
+    border: 1px solid var(--main-light-color);
+    border-radius: 0.3rem;
+    font-family: 'Vogue';
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+/* --- Medium : 2 colonnes (photo | flyer), galerie en dessous --- */
+@media (min-width: 768px) {
+  main:has(.personne-bio) {
+    grid-template-columns: 1fr 1fr;
+  }
+  main:has(.personne-bio) .gallery {
+    grid-column: 1 / -1;
+  }
+
+  .personne-info h1 {
+    font-size: 2.5rem;
+  }
+  .personne-info .role {
+    font-size: 1.4rem;
+  }
+
+  .personne-bio {
+    .bio-accroche { font-size: 1.5rem; }
+    h3 { font-size: 1.3rem; }
+  }
+}
+
+/* --- Large : 3 colonnes (photo | flyer | galerie) --- */
+@media (min-width: 1200px) {
+  main:has(.personne-bio) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  main:has(.personne-bio) .gallery {
+    grid-column: auto;
+  }
+
+  .personne-info h1 {
+    font-size: 3rem;
+  }
+  .personne-info .role {
+    font-size: 1.5rem;
+  }
+
+  .personne-bio {
+    .bio-accroche { font-size: 1.6rem; }
+    h3 { font-size: 1.4rem; margin-top: 2rem; }
+    .garanties { margin: 1.5rem 0; }
   }
 }
